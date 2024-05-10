@@ -1,59 +1,106 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f2f2f2;
-}
-
-.container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 70px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 40px;
-}
-
-h3 {
-    font-size: 20px; /* Added 'px' unit */
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-    width: 100%;
-    padding: 15px; /* Adjusted padding */
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-input[type="submit"] {
-    width: 100%;
-    background-color: #f89cab;
-    color: #000;
-    padding: 15px; /* Adjusted padding */
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: transparent;
-    color: #000;
-    border: 2px solid #f89cab;
-}
-
-@media screen and (max-width: 500px) {
-    .container {
-        width: 90%;
-        padding: 30px; /* Adjusted padding */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Signup Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
     }
-}
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: clamp(2rem, 4vw, 3rem); /* Responsive font size */
+    }
+    h3 {
+      font-size: 1.2rem; /* Adjust heading size for smaller screens */
+    }
+    .flex-row {
+      display: flex;
+      justify-content: space-between; /* Align items horizontally */
+      align-items: center; /* Align items vertically */
+      margin-bottom: 15px; /* Add spacing after link */
+    }
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+    a:hover {
+      color: #f89cab;
+    }
+    input[type="text"], input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 15px; /* Reduce padding for smaller screens */
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      width: 100%;
+      background-color: #f89cab;
+      color: #000;
+      padding: 15px; 
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: transparent;
+      color: #000;
+      border: 2px solid #f89cab;
+    }
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      .container {
+        padding: 20px;
+      }
+    }
+    @media screen and (max-width: 500px) {
+      .container {
+        width: 90%;
+      }
+      h3 {
+        font-size: 1rem;
+      }
+      input[type="text"], input[type="email"], input[type="password"] {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="flex-row">
+    <a href="./index.html">Home</a>
+    <a href="./signup.html">SignIn</a>
+  </div>
+
+  <h1>Gray's <span style="color: #f89cab;">Bagz</span></h1>
+  <div class="container">
+    <h3>Hello</h3>
+    <p>Sign in to Gray's Bagz</p>
+    
+    <form action="#" method="post">
+      <input type="text" name="fullname" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="password" name="password" placeholder="password" required>
+      <input type="submit" value="Signup" >
+    </form>
+  </div>
+</body>
+</html>
+
